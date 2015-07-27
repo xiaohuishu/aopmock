@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
+    <!--
+
+        beans.xml文件
+
+        声明程序中所有实体类
+
+        1.通过在此文件中规定实体所依赖的类来进行注入;
+
+        2.在这通过<aop-config>标签来定义实体类的拦截;
+
+
+    -->
+
 	<bean id="str1" class="java.lang.String" value="this primity test"></bean>
 
 	<bean id="shoutBean" class="com.springAOP.Bean.testAOPBean">
@@ -15,9 +28,9 @@
 			<before method="Before"></before>
 			<around method="Around"></around>
 			<after method="After"></after>
-			
+
 		</aspect>
 
 	</aop-config>
 
-</beans>  
+</beans>
