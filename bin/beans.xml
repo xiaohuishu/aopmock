@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+	<bean id="str1" class="java.lang.String" value="this primity test"></bean>
+
+	<bean id="shoutBean" class="com.springAOP.Bean.testAOPBean">
+		<property name="name" value="shu xiao hui"></property>
+		<property name="test" value="3"></property>
+	</bean>
+	<bean id="adviceBean" class="com.springAOP.Advice.Advice"></bean>
+	<aop-config>
+		<aspect ref="adviceBean">
+
+			<pointcut interceptObj="com.springAOP.Bean.testAOPBean" method="shout" ></pointcut>
+			<before method="Before"></before>
+			<around method="Around"></around>
+			<after method="After"></after>
+			
+		</aspect>
+
+	</aop-config>
+
+</beans>  
