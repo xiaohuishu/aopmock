@@ -36,17 +36,22 @@
 
         //代表beans.xml文件的根节点对象
     	private static Element rootElement = null;
+
     	//使用Dom4j SAX方式来进行解析读取xml文件
         private static SAXReader saxReader = null;
+
         //xml名称
-    	private static String pathName = "beans.xml";
-    	// private static annotationUtil autil = null;
+        private static String pathName = "beans.xml";
+
+
+        // private static annotationUtil autil = null;
 	    // 存储所有的bean实体类的Map集合
-	    private static Map<String, Object> beans = new HashMap<String, Object>();
-	    /**
+        private static Map<String, Object> beans = new HashMap<String, Object>();
+
+        /**
 	     * 静态块，进行初始化得到beans.xmlroot节点，得到beans集合
 	     */
-	    static {
+        static {
 		    // autil = new annotationUtil();
 		    saxReader = new SAXReader();
 		    try {
@@ -60,6 +65,7 @@
 
 	    	}
 	    }
+
 
     	/**
     	 * 通过xml的名称得到xml文件的rootElement节点

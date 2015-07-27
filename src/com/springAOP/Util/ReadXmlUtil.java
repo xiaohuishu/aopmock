@@ -1,5 +1,8 @@
-package com.springAOP.util;
 
-public class ReadXmlUtil {
-	
-}
+
+
+    package com.springAOP.util;
+
+    public class ReadXmlUtil {
+
+    }
